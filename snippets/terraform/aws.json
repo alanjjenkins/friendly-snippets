@@ -1,0 +1,47 @@
+{
+  "daipdr": {
+    "prefix": "dipdr",
+    "body": [
+      "data \"aws_iam_policy_document\" \"$1\" {",
+      "    statement {",
+      "        sid = \"$2\"",
+      "        actions = [\"$3\"]",
+      "        resources = [\"$0\"]",
+      "    }",
+      "}"
+    ],
+    "description": "data aws_iam_policy_document resources variant."
+  },
+  "daipdps": {
+    "prefix": "dipdps",
+    "body": [
+      "data \"aws_iam_policy_document\" \"$1\" {",
+      "    statement {",
+      "        sid = \"$2\"",
+      "        actions = [\"$3\"]",
+      "        principals {",
+      "            type = \"Service\"",
+      "            identifiers = [\"$0\"]",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "data aws_iam_policy_document service principals variant."
+  },
+  "daipdpa": {
+    "prefix": "dipdpa",
+    "body": [
+      "data \"aws_iam_policy_document\" \"$1\" {",
+      "    statement {",
+      "        sid = \"$2\"",
+      "        actions = [\"$3\"]",
+      "        principals {",
+      "            type = \"AWS\"",
+      "            identifiers = [\"$0\"]",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "data aws_iam_policy_document AWS principals variant."
+  }
+}
